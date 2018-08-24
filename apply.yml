@@ -2,6 +2,10 @@
 - name: Deploy {{ target }} 
   hosts: "{{ target }}"
   vars:
+    openshift:
+      common:
+        client_binary: "/usr/bin/oc"
+        admin_binary: "/usr/bin/oc adm"
     ruby_namespace: "ruby-example"
   tasks:
     - include_role:
