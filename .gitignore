@@ -1,4 +1,5 @@
 roles/*
+!roles/requirements.yml
 *.pyc
 .idea
 *.iml
