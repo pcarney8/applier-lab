@@ -1,0 +1,6 @@
+roles/*
+*.pyc
+.idea
+*.iml
+gdsl
+*.retry

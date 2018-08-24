@@ -5,4 +5,6 @@
     ruby_namespace: "ruby-example"
   tasks:
     - include_role:
+        name: casl-ansible/roles/openshift-login
+    - include_role:
         name: openshift-applier/roles/openshift-applier

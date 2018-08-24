@@ -2,3 +2,8 @@
   scm: git
   src: https://github.com/redhat-cop/openshift-applier
   version: v3.9.0
+# From 'casl-ansible'
+- src: https://github.com/redhat-cop/casl-ansible
+  scm: git
+  version: master
+  name: casl-ansible
