@@ -1,8 +1,6 @@
 ---
 - name: Deploy {{ target }} 
   hosts: "{{ target }}"
-  vars:
-    ruby_namespace: "ruby-example"
   tasks:
     - include_role:
         name: openshift-applier/roles/openshift-applier
