@@ -93,7 +93,7 @@ objects:
           deploymentconfig: ruby-ex
       spec:
         containers:
-        - image: docker-registry.default.svc:5000/${BUILD_NAMESPACE}/ruby-ex:latest
+        - image: docker-registry.default.svc:5000/${NAMESPACE_BUILD}/ruby-ex:latest
           imagePullPolicy: Always
           name: ruby-ex
           ports:
@@ -117,7 +117,7 @@ objects:
         from:
           kind: ImageStreamTag
           name: ruby-ex:latest
-          namespace: ${BUILD_NAMESPACE}
+          namespace: ${NAMESPACE_BUILD}
       type: ImageChange
 - apiVersion: v1
   kind: Route
@@ -153,7 +153,7 @@ objects:
     sessionAffinity: None
     type: ClusterIP
 parameters:
-- description: BUILD_NAMESPACE
-  displayName: BUILD_NAMESPACE
-  name: BUILD_NAMESPACE
+- description: NAMESPACE_BUILD
+  displayName: NAMESPACE_BUILD
+  name: NAMESPACE_BUILD
   required: true
