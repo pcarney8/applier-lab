@@ -7,15 +7,15 @@ openshift_cluster_content:
   - name: dev
     template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
     action: create
-    params: "{{ playbook_dir }}/params/projectrequests/project"
+    params: "{{ inventory_dir }}/../params/projectrequests/project"
     tags:
     - projectrequests
     - projectrequests-dev 
 - object: ruby-components
   content:
   - name: ruby-ex
-    template: "{{ playbook_dir }}/templates/app/ruby.yml"
-    params: "{{ playbook_dir }}/params/ruby/build"
+    template: "{{ inventory_dir }}/../templates/app/ruby.yml"
+    params: "{{ inventory_dir }}/../params/ruby/build"
     namespace: "ruby-example"
     tags:
     - app
